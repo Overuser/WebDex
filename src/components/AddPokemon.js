@@ -4,23 +4,21 @@ const AddPokemon = ({ onAdd, pokemon }) => {
   // } else {
   //   console.log("nothing to see here");
   // }
-  return ( 
-    <div className="create__add-member__block" >
-      {
-        pokemon ? <p>{ pokemon.name.english }</p> : null
-      }
+  return (
+    <div className='create__add-member__block'>
+      {pokemon ? <p>{pokemon.name.english}</p> : null}
 
-      { pokemon ?
-        null
-        :
-        <button onClick={ ( event ) => {
+      {pokemon ? null : (
+        <button
+          onClick={(event) => {
             event.preventDefault();
-            onAdd() 
-        }}>
+            onAdd();
+          }}
+        >
           Add
         </button>
-      }
+      )}
     </div>
   );
-}
+};
 export default AddPokemon;
