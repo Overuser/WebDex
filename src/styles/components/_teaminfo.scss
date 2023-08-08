@@ -1,0 +1,87 @@
+@import './block';
+
+.create__teaminfo__container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.create__teaminfo__dex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow: scroll;
+}
+
+.create__teaminfo__dex::-webkit-scrollbar {
+  display: none;
+}
+
+.create__teaminfo__team {
+  width: 26%;
+  max-width: 49%;
+  height: 6em;
+  margin: 1px $l-size;
+  border-radius: 15px;
+  display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  box-shadow: 1px 1px 12px 0.1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: $s-size 0;
+  margin: $s-size 0;
+  background: lighten($dark-blue, 10%);
+  color: white;
+}
+
+.create__teaminfo__team__link {
+  font-size: 1.1em;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: calc( $s-size / 2 );
+  text-align: center;
+  width: 100%;
+  height: 10%;
+
+  a {
+    color: darken(white, 10%);
+    text-decoration: none;
+  }
+}
+
+.create__teaminfo__team__types {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+  height: 30%;
+  margin-bottom: $s-size;
+
+  p {
+    height: 2em;
+    width: 5em;
+    font-size: .6em;
+  }
+
+}
+
+.create__teaminfo__team__button {
+  width: 35%;
+  margin: 4% auto;
+  border-radius: 25px;
+  height: 20%;
+  border: none;
+  color: #444;
+  font-weight: 700;
+  outline: none;  
+}
+
+.create__teaminfo__team__image {
+  height: 30%;
+}

@@ -1,0 +1,11 @@
+@import './block';
+
+.home__dex {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  text-align: left;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: $xl-size;
+}

@@ -1,0 +1,32 @@
+.navbar {
+  background: $off-black;
+  color: white;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  height: 5vh;
+  margin-bottom: $s-size;
+  max-width: 100vw;
+  padding: $m-size 0;
+  position: sticky;
+  top: 0;
+}
+
+.navbar__title {
+  font-size: $l-size;
+  margin: 0;
+  margin-left: $s-size;
+}
+
+.navbar__links {
+  color: $off-white;
+  font-size: $m-size;
+  font-weight: 500;
+  margin: $s-size;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #f2f2f2;
+  margin: $s-size;
+}

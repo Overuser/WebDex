@@ -1,0 +1,76 @@
+@import './block';
+
+.Team-wrapper, .Team-container {
+  width: 100%;
+  height: auto;
+  margin-bottom: $xl-size;
+}
+
+.Team-wrapper {
+  .Type {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -moz-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 3em;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    width: 5em;
+    border: 1px solid #000;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 7px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.5em;
+    padding: .3em .3em;
+    margin-left: 0.65%;
+    box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+  }
+}
+
+.teambuilder__team {
+  margin-bottom: $s-size;
+  border-bottom: 1px solid white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.teambuilder__team-members {
+  width: 100%;
+  display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.teambuilder__team-members__delete, .teambuilder__teamcreator {
+  width: 30%;
+  margin: 2% 25%;
+  border-radius: 25px;
+  height: 2em;
+  border: none;
+  color: #444;
+  font-weight: 700;
+  outline: none;
+  a {
+    text-decoration: none;
+  }
+}
+
