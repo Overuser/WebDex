@@ -45,7 +45,7 @@ const Home = ({
           <div className="home">
             <h1 className="home__title">Pokedex</h1>
             <div className="home__searchbar__container">
-            <span><input name="search-bar" id="home__searchbar" type='search' onChange={ handleSearch } /></span>
+              <span><input name="search-bar" id="home__searchbar" type='search' onChange={ handleSearch } /></span>
             </div>
             {isPending && <Loading />}
             {error && <h2>{ error }</h2>}

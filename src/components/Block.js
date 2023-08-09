@@ -7,7 +7,7 @@ export const DexBlock = ({ dex , ModalView}) => {
   return (
     <div className="home__dex__block">
       <div className="home__dex__block__image">
-        <img src={ image } alt={ dex.name.english } height="100px" width="80px" />
+        <img src={ image } alt={ dex.name.english } height="80px" width="80px" />
       </div>
       <div className="home__dex__block__link">
         <p onClick={ (event) => {
