@@ -16,9 +16,10 @@ const App = () => {
     isPending,
     error,
   } = useFetch("http://localhost:8000/pokemon");
+  
   const [filterOption, setFilterOption] = useState([]);
   const [filteredPokedex, setFilteredPokedex] = useState(null);
-  const [searchDex, setSearchDex] = useState(null);
+  const [searchedPokedex, setSearchedPokedex] = useState(null);
 
   const handleFilteredSearch = (e) => {
     e.preventDefault();
@@ -26,22 +27,20 @@ const App = () => {
     const searchWord = !!document.getElementById("home__searchbar")
       ? document.getElementById("home__searchbar").value.trim().toLowerCase()
       : "";
-    const searchDex = pokedex.filter((dex) => {
+    const searchedPokedex = pokedex.filter((dex) => {
       return dex.name.english.toLowerCase().includes(searchWord);
     });
-    const filtered = searchDex.filter((dex) => {
+    const filtered = searchedPokedex.filter((dex) => {
       return dex.type.some((type) => filterOption.includes(type));
     });
 
     setFilteredPokedex(filtered);
-    setSearchDex(filtered);
+    setSearchedPokedex(filtered);
   };
 
   const handleFilterOption = (e) => {
     const type = e.target.value;
-    console.log(type);
     const unique = new Set(filterOption);
-    console.log(unique);
 
     if (unique.has(type)) {
       unique.delete(type);
@@ -97,7 +96,7 @@ const App = () => {
     const searchWord = !!document.getElementById("home__searchbar")
       ? document.getElementById("home__searchbar").value.trim().toLowerCase()
       : "";
-    const searchDex = pokedex.filter((dex) => {
+    const searchedPokedex = pokedex.filter((dex) => {
       return dex.name.english.toLowerCase().includes(searchWord);
     });
 
@@ -111,7 +110,7 @@ const App = () => {
 
     setFilterOption([]);
     setFilteredPokedex(null);
-    setSearchDex(searchDex);
+    setSearchedPokedex(searchedPokedex);
   };
 
   const handleSearch = () => {
@@ -121,17 +120,17 @@ const App = () => {
       .toLowerCase();
 
     if (searchWord === "") {
-      setSearchDex(null);
+      setSearchedPokedex(null);
     } else if (filteredPokedex) {
-      const searchDex = filteredPokedex.filter((dex) => {
+      const searchedPokedex = filteredPokedex.filter((dex) => {
         return dex.name.english.toLowerCase().includes(searchWord);
       });
-      setSearchDex(searchDex);
+      setSearchedPokedex(searchedPokedex);
     } else {
-      const searchDex = pokedex.filter((dex) => {
+      const searchedPokedex = pokedex.filter((dex) => {
         return dex.name.english.toLowerCase().includes(searchWord);
       });
-      setSearchDex(searchDex);
+      setSearchedPokedex(searchedPokedex);
     }
   };
 
@@ -148,9 +147,9 @@ const App = () => {
               isPending={isPending}
               error={error}
               pokedex={pokedex}
-              filteredDex={filteredPokedex}
+              filteredPokedex={filteredPokedex}
               filterOption={filterOption}
-              searchDex={searchDex}
+              searchedPokedex={searchedPokedex}
               toggleAll={toggleAll}
               clearFilter={clearFilter}
             />
@@ -170,12 +169,12 @@ const App = () => {
               error={error}
               pokedex={pokedex}
               filterOption={filterOption}
-              filteredDex={filteredPokedex}
+              filteredPokedex={filteredPokedex}
               clearFilter={clearFilter}
               handleFilterOption={handleFilterOption}
               handleFilteredSearch={handleFilteredSearch}
               toggleAll={toggleAll}
-              searchDex={searchDex}
+              searchedPokedex={searchedPokedex}
             />
           </Route>
           <Route exact path='/pokemon/:id'>
