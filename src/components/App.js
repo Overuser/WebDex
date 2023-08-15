@@ -8,7 +8,7 @@ import TeamCreator from "./TeamCreator";
 import RsideBar from "./RsideBar";
 import LsideBar from "./LsideBar";
 import { useState } from "react";
-import useFetch from "../useFetch";
+import useFetch from "../hooks/useFetch";
 
 const App = () => {
   const {
