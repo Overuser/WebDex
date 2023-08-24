@@ -1,11 +1,12 @@
+import { SearchBar } from './home_componenets/searchbar';
+import './home_style/home.scss';
+
 const Home = () => {
   return (
     <div className='home'>
       <div className='home__header'>
         <h1 className='home__header__title'>Pokedex</h1>
-        <div className='home__searchbar__container'>
-          <input name='search-bar' id='home__searchbar' type='search' />
-        </div>
+        <SearchBar />
       </div>
       <div className='home__content'>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore earum

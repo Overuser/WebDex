@@ -1,0 +1,31 @@
+@use '../../../../page_styles/base/settings';
+
+.home__searchbar__container {
+  margin: settings.$s-size auto;
+  height: 3.5rem;
+  background: settings.$dark-blue;
+  display: flex;
+    justify-content: center;
+}
+
+#home__searchbar {
+  border-radius: 25px;
+  border: none;
+  height: settings.$l-size;
+  width: 30%;
+  outline: none;
+  padding: 7px;
+}
+
+input[type="search" i]::-webkit-search-cancel-button {
+  margin-left: 2px;
+}
+
+input::-webkit-input-placeholder {
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+input::-webkit-textfield-decoration-container {
+  margin: 0 5px;
+}

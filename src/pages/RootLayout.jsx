@@ -6,7 +6,6 @@ export default function RootLayout() {
   return (
     <div className='app'>
       <Navbar />
-      <aside></aside>
       <main className='app__main'>
         <Outlet />
       </main>
