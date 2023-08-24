@@ -1,0 +1,20 @@
+@import '../components/home';
+@import '../components/teambuilder';
+@import '../components/create';
+
+.Main {
+  width: 60%;
+  position: relative;
+  padding: 0 5px;
+  height: 100%;
+  text-align: center;
+  overflow: scroll;
+}
+
+.Main::-webkit-scrollbar {
+  display: none;
+}
+
+.ReactModalPortal {
+  display: inline;
+}

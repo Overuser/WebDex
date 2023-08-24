@@ -1,4 +1,4 @@
-import { DexBlock } from "../../components/Block";
+import { DexBlock } from "../../../../components/Block";
 
 const DexBlocks = ({ dexData, ModalView }) => {
   return (

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import { TeamBlock } from "./Block";
-import LsideBar from "./LsideBar";
-import RsideBar from "./RsideBar";
+import { TeamBlock } from "../components/Block";
+import LsideBar from "../components/LsideBar";
+import RsideBar from "../components/RsideBar";
 
 const TeamBuilder = ({
   handleFilterOption,

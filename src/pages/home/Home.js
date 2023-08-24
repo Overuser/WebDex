@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HomeDex from "./componenets/HomeDex";
+import HomeDex from "./home_componenets/homedex/homeDex/HomeDex";
 import Loading from "../components/Loading";
 import PokeInfo from "../components/PokeInfo";
 import LsideBar from "../components/LsideBar";
