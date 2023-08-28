@@ -72,7 +72,7 @@ const TeamCreator = ({
         nature: '',
         happiness: '',
         gender: '',
-        moves: [],
+        moves: Array(4),
       }
     })
     

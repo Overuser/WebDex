@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import useFetch from "../hooks/useFetch";
-import { TeamBlock } from "../components/Block";
+import { TeamBlock } from "../components/blocks/Block";
 import LsideBar from "../components/LsideBar";
 import RsideBar from "../components/RsideBar";
 

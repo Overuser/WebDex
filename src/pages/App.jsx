@@ -11,6 +11,7 @@ import { Builder } from "./team_builder/team_builder_pages/builder";
 import { Teams } from "./team_builder/team_builder_pages/teams";
 
 import './page_styles/index.scss';
+import { PokemonProvider } from "./Provider";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,7 +26,11 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <PokemonProvider>
+      <RouterProvider router={router} />
+    </PokemonProvider>
+  );
 };
 
 export default App;
