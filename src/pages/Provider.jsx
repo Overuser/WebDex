@@ -29,7 +29,7 @@ const usePokemonFetch = () => {
 
   const searchedPokemons = useMemo(() => {
     return pokemons.filter((pokemon) =>
-      pokemon.name.english.toLowerCase().includes(search)
+      pokemon.name.english.toLowerCase().includes(search.toLowerCase())
     );
   }, [pokemons, search]);
 

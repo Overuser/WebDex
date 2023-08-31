@@ -12,9 +12,10 @@
   border-radius: 25px;
   border: none;
   height: settings.$l-size;
-  width: 30%;
+  width: 25%;
   outline: none;
   padding: 7px;
+  background-color: darken($color: white, $amount: 20%);
 }
 
 input[type="search" i]::-webkit-search-cancel-button {

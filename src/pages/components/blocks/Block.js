@@ -12,7 +12,7 @@ export const DexBlock = ({ dex , ModalView}) => {
       <div className="home__dex__block__link">
         <p onClick={ (event) => {
           event.preventDefault()
-          ModalView( dex )
+          ModalView( dex )  
         } } >{ dex.name.english.toUpperCase() }</p>
       </div>
       <div className="home__dex__block__types">

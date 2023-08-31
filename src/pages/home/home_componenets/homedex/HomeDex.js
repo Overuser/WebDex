@@ -10,4 +10,4 @@ const DexBlocks = ({ dexData, ModalView }) => {
   );
 };
 
-export default DexBlocks;
+// export default DexBlocks;
