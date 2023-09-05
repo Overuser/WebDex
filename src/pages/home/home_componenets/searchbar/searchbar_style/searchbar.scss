@@ -5,17 +5,24 @@
   height: 3.5rem;
   background: settings.$dark-blue;
   display: flex;
-    justify-content: center;
+    justify-content: right;
+  margin-right: 1%;
 }
 
 #home__searchbar {
   border-radius: 25px;
   border: none;
   height: settings.$l-size;
-  width: 25%;
+  width: 20%;
   outline: none;
   padding: 7px;
   background-color: darken($color: white, $amount: 20%);
+  transition: width 400ms ease-in-out;
+}
+
+#home__searchbar:focus {
+  width: 25%;
+  transition: width 400ms ease-in-out;
 }
 
 input[type="search" i]::-webkit-search-cancel-button {

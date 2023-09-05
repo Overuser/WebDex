@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "paths": {
-      "@components/*": ["./src/pages/components/*"],
-      "@styles/*": ["./src/pages/page_styles/*"]
+      "@components/*": ["C:/Users/ninja-app/src/pages/components/*"],
+      "@styles/*": ["C:/Users/ninja-app/src/pages/page_styles/*"]
     }
   }
 }

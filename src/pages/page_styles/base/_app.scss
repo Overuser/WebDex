@@ -1,9 +1,29 @@
-@import '../components/navbar';
-@import './content';
+// @import '../components/navbar';
+// @import './content';
 
-.App {
-  width: 100vw;
-  height: 100vh;
+// .App {
+//   width: 100vw;
+//   height: 100vh;
+//   overflow: hidden;
+// }
+
+#root {
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
+
+.app {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app__main {
+  display: flex;
+    justify-content: space-between;
+  height: 100%;
+  overflow: hidden;
+}
+
 

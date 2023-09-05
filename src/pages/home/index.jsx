@@ -1,6 +1,6 @@
-import { Homedex } from './home_componenets/homedex';
-import { SearchBar } from './home_componenets/searchbar';
-import './home_style/home.scss';
+import Homedex from "./home_componenets/homedex";
+import { SearchBar } from "./home_componenets/searchbar";
+import "./home_style/home.scss";
 
 const Home = () => {
 
@@ -9,7 +9,7 @@ const Home = () => {
       <div className='home__header'>
         <SearchBar />
       </div>
-      <Homedex />
+        <Homedex />
     </div>
   );
 };

@@ -1,15 +1,26 @@
-import {createContext, useEffect, useContext, useReducer, useCallback, useMemo } from "react";
+import {
+  createContext,
+  useEffect,
+  useContext,
+  useReducer,
+  useCallback,
+  useMemo,
+} from "react";
 
 const PokemonContext = createContext([]);
 
 const usePokemonFetch = () => {
-  const [{ pokemons, search }, dispatch] = useReducer(
+  const [{ pokemons, search, pending, teams }, dispatch] = useReducer(
     (state, action) => {
       switch (action.type) {
         case "setPokemons":
-          return { ...state, pokemons: action.payload };
+          return { ...state, pokemons: action.payload, pending: false };
         case "setSearch":
           return { ...state, search: action.payload };
+        case "setPending":
+          return { ...state, pending: true };
+        case "setTeams":
+          return { ...state, teams: action.payload, pending: false };
         default:
           break;
       }
@@ -17,6 +28,8 @@ const usePokemonFetch = () => {
     {
       pokemons: [],
       search: "",
+      pending: true,
+      teams: [],
     }
   );
 
@@ -29,7 +42,7 @@ const usePokemonFetch = () => {
 
   const searchedPokemons = useMemo(() => {
     return pokemons.filter((pokemon) =>
-      pokemon.name.english.toLowerCase().includes(search.toLowerCase())
+      pokemon.name.english.toLowerCase().includes(search.trim().toLowerCase())
     );
   }, [pokemons, search]);
 
@@ -46,7 +59,21 @@ const usePokemonFetch = () => {
       });
   }, []);
 
-  return { pokemons: searchedPokemons, search, setSearch };
+  useEffect(() => {
+    fetch("http://localhost:5000/teams")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+        dispatch({
+          type: "setTeams",
+          payload: data,
+        });
+      });
+  }, []);
+
+  return { pokemons: searchedPokemons, search, setSearch, pending, teams };
 };
 
 export const PokemonProvider = ({ children }) => {

@@ -1,7 +1,7 @@
-import "./homedex_card_style/homedex_card.scss";
+import "./homedex_card.scss";
 
-export default function Card({ pokemon }) {
-  const image = require(`../../../../../../assests/images/${String(
+export default function Card ({ pokemon }) {
+  const image = require(`../../../../../../../assests/images/${String(
     pokemon.id
   ).padStart(3, 0)}.png`);
 

@@ -2,14 +2,18 @@
 
 .home__content {
   display: flex;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
     align-items: center;
   text-align: center;
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: settings.$xl-size;
-  padding: 0 10px;
+  width:  100%;
+  margin: 0;
+  // margin-bottom: settings.$xl-size;
+  // padding: 0 10px;
+  padding-left: 1%;
+  scroll-behavior: smooth;
+  transition: display 1000ms ease-in-out;
+  // overflow: scroll;
 }
 
 
