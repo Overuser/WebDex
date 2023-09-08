@@ -65,7 +65,6 @@ const usePokemonFetch = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data);
         dispatch({
           type: "setTeams",
           payload: data,

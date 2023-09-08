@@ -9,10 +9,10 @@ const PokeInfo = ({ pokemon, isClosed, onClose, onOpen, bottom }) => {
       <div>
         {pokemon && (
             <ReactModal 
-              isOpen={ isClosed } 
+              isOpen={ isClosed }
               onAfterOpen={ onOpen }
-              closeTimeoutMS={ 500 } 
-              onRequestClose={ onClose } 
+              closeTimeoutMS={ 500 }
+              onRequestClose={ onClose }
               className={ "center" } 
               id="modal" 
               style={ 

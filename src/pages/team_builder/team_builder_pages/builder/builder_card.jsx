@@ -1,14 +1,9 @@
-import "./homedex_card.scss";
+import './builder_card.scss';
 
-export default function Card ({ pokemon, openModal }) {
-  const image = require(`../../../../../../../assests/images/${String(
+export default function Card ({ pokemon }) {
+  const image = require(`../../../../assests/images/${String(
     pokemon.id
   ).padStart(3, 0)}.png`);
-
-  const handleClick = (event) => {
-    event.preventDefault();
-    openModal(pokemon);
-  }
 
   return (
     <div key={pokemon.id} className='home__content__pokedex-card'>
@@ -16,7 +11,7 @@ export default function Card ({ pokemon, openModal }) {
         <img src={ image } alt={ pokemon.name.english } height='100px' width='100px' />
       </div>
       <div className='home__content__pokedex-card__name'>
-        <span onClick={ handleClick } className="home__content__pokedex-card__name__name" >{pokemon.name.english.toUpperCase()}</span>
+        <span>{pokemon.name.english.toUpperCase()}</span>
         <span className="home__content__pokedex-card__name__number" >{`#${String(pokemon.id).padStart(3, 0)}`}</span>
       </div>
       <div className='home__content__pokedex-card__types'>
@@ -28,9 +23,7 @@ export default function Card ({ pokemon, openModal }) {
           );
         })}
       </div>
-      
+      <button className="create__teaminfo__dex__block__button">Add</button>
     </div>
   );
 }
-
-
