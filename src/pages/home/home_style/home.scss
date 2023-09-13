@@ -7,6 +7,7 @@
   // padding-bottom: 6%;
   scroll-behavior: auto;
   overscroll-behavior: auto;
+  position: relative;
 
 }
 
@@ -14,16 +15,4 @@
   display: none;
 }
 
-// #modal {
-//   width: 100vw;
-//   height: 60vh;
-//   position: absolute;
-//   margin: 0;
-//   padding: 0;
-//   border: none;
-//   z-index: 2;
-// }
-
-// #modal::-webkit-scrollbar {
-//   display: none;
-// }
+// 

@@ -1,9 +1,6 @@
-import { usePokemon } from '../../../Provider';
 import './searchbar_style/searchbar.scss'
 
-export const SearchBar = () => {
-
-  const { search, setSearch } = usePokemon();
+export const SearchBar = ({ search, setSearch }) => {
   
   const onChange = ( event ) => {
     event.preventDefault();

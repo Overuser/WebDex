@@ -38,7 +38,7 @@ const Home = ({
 
   return (
     <div className='content'>
-      <div className='Left-bar'>
+      <div className='Left-bar'> 
         <LsideBar />
       </div>
       <div className='Main'>

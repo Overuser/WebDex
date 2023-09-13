@@ -1,25 +1,48 @@
 import ReactModal from "react-modal";
-const Pokeview = ({isOpen, closeModal, pokemon}) => {
-  
+import "./Pokeview.scss";
+
+const Pokeview = ({
+  isOpen,
+  closeModal,
+  pokemon,
+  bottom,
+  afterOpen,
+  background,
+}) => {
   return (
-    <ReactModal
-      isOpen={ isOpen }
-      parentSelector={() => document.getElementById("home__content")}
-      onRequestClose={ closeModal }
-      style={{
-        overlay: {
-          zIndex: 2,
-          backgroundColor: "rgba(0, 0, 0, 0.50)",
-        },
-        content: {
-          bottom: "0px",
-          transition: "bottom 500ms ease-out",
-        },
-      }}
-      ariaHideApp={false}
-    >
-      <h1>{ pokemon &&  pokemon.name.english }</h1>
-    </ReactModal>
+    <>
+    {
+      pokemon &&
+        <ReactModal
+        isOpen={isOpen}
+        parentSelector={() => document.getElementById("home")}
+        onRequestClose={closeModal}
+        onAfterOpen={afterOpen}
+        className={"center"}
+        overlayClassName={"overlay"}
+        closeTimeoutMS={ 0 }
+        style={{
+          overlay: {
+            background: background,
+            transition: "background 200ms ease-in-out",
+            zIndex: 3
+          },
+          content: {
+            bottom: bottom,
+            transition: "bottom 300ms ease-in-out",
+          },
+        }}
+        ariaHideApp={false}
+      >
+        <div className='left'></div>
+        <div className='middle'>
+          <h2>{ pokemon.name.english }</h2>
+        </div>
+        <div className='right'></div>
+      </ReactModal>
+    
+    }
+    </>
   );
 };
 

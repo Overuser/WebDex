@@ -14,7 +14,7 @@ const PokeInfo = ({ pokemon, isClosed, onClose, onOpen, bottom }) => {
               closeTimeoutMS={ 500 }
               onRequestClose={ onClose }
               className={ "center" } 
-              id="modal" 
+              id="modal"
               style={ 
                 { overlay: {
                     zIndex: 2,
