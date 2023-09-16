@@ -3,10 +3,13 @@
 .home__searchbar__container {
   margin: settings.$s-size auto;
   height: 3.5rem;
-  background: settings.$dark-blue;
+  background: rgba($color: settings.$dark-blue, $alpha: 0);
   display: flex;
     justify-content: right;
   margin-right: 1%;
+  position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 #home__searchbar {

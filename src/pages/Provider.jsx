@@ -39,7 +39,7 @@ const usePokemonFetch = () => {
           payload: data,
         });
       });
-  }, []);
+  }, [])
 
   useEffect(() => {
     fetch("http://localhost:5000/teams")
