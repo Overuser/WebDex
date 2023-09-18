@@ -14,7 +14,7 @@ export const Teams = () => {
           </button>
           <div>
             { teams.map(( team ) => {
-                // console.log(team.team, 'teambuilder comp');
+                console.log(team.team, 'teambuilder comp');
                 return <TeamsBlock key={ team.id } members={ team.team } />
               })}
           </div>

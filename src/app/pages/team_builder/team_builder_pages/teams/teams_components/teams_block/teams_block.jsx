@@ -1,7 +1,7 @@
 import TeamsCard from "./teams-card"
 
 const TeamsBlock = ({ members }) => {
-  // console.log(members, "team block comp");
+  console.log(members, "team block comp");
   return (
     <div>
       {

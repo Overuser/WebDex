@@ -1,0 +1,250 @@
+// Colors
+$off-black: #20222b;
+$off-white: #a5afd7;
+$blue: #3c4251;
+$dark-blue: #333745;
+$light-blue: #464b5e;
+$purple: #8357c5;
+
+//Fonts
+$s-size: 1.2rem;
+$m-size: 1.6rem;
+$l-size: 3.2rem;
+$xl-size: 4.8rem;
+
+//Types
+.Type {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -moz-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 2.3em;
+  color: #FFF;
+  text-shadow: 1px 1px 1px #333;
+  width: 5em;
+  border: 1px solid #000;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 7px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 0.8em;
+  padding: 1em 1em;
+  margin-left: 0.65%;
+  box-shadow: 5px 5px 12px 1px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+/********************************
+Pokemon types                   *
+********************************/
+
+.Normal {
+  background: -webkit-gradient(linear,left top,left bottom,from(#a8a878),to(#8a8a59));
+  background: -webkit-linear-gradient(#a8a878,#8a8a59);
+  background: -moz-linear-gradient(#a8a878,#8a8a59);
+  background: -o-linear-gradient(#a8a878,#8a8a59);
+  background: linear-gradient(#a8a878,#8a8a59)!important;
+  border-color: #79794E!important;
+  color: #FFF!important;    
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Fire {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#f08030),to(#dd6610));
+  background: -webkit-linear-gradient(#f08030,#dd6610);
+  background: -moz-linear-gradient(#f08030,#dd6610);
+  background: -o-linear-gradient(#f08030,#dd6610);
+  background: linear-gradient(#f08030,#dd6610)!important;
+  border-color: #B4530D!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Water {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#6890f0),to(#386ceb));
+  background: -webkit-linear-gradient(#6890f0,#386ceb);
+  background: -moz-linear-gradient(#6890f0,#386ceb);
+  background: -o-linear-gradient(#6890f0,#386ceb);
+  background: linear-gradient(#6890f0,#386ceb)!important;
+  border-color: #1753E3!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Electric {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#f8d030),to(#f0c108));
+  background: -webkit-linear-gradient(#f8d030,#f0c108);
+  background: -moz-linear-gradient(#f8d030,#f0c108);
+  background: -o-linear-gradient(#f8d030,#f0c108);
+  background: linear-gradient(#f8d030,#f0c108)!important;
+  border-color: #C19B07!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Fairy {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#F98CFF),to(#F540FF));
+  background: -webkit-linear-gradient(#F98CFF,#F540FF);
+  background: -moz-linear-gradient(#F98CFF,#F540FF);
+  background: -o-linear-gradient(#F98CFF,#F540FF);
+  background: linear-gradient(#F98CFF,#F540FF)!important;
+  border-color: #C1079B!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Grass {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#78c850),to(#5ca935));
+  background: -webkit-linear-gradient(#78c850,#5ca935);
+  background: -moz-linear-gradient(#78c850,#5ca935);
+  background: -o-linear-gradient(#78c850,#5ca935);
+  background: linear-gradient(#78c850,#5ca935)!important;
+  border-color: #4A892B!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Ice {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#98d8d8),to(#69c6c6));
+  background: -webkit-linear-gradient(#98d8d8,#69c6c6);
+  background: -moz-linear-gradient(#98d8d8,#69c6c6);
+  background: -o-linear-gradient(#98d8d8,#69c6c6);
+  background: linear-gradient(#98d8d8,#69c6c6)!important;
+  border-color: #45B6B6!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Fighting {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#c03028),to(#9d2721));
+  background: -webkit-linear-gradient(#c03028,#9d2721);
+  background: -moz-linear-gradient(#c03028,#9d2721);
+  background: -o-linear-gradient(#c03028,#9d2721);
+  background: linear-gradient(#c03028,#9d2721)!important;
+  border-color: #82211B!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Poison {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#a040a0),to(#803380));
+  background: -webkit-linear-gradient(#a040a0,#803380);
+  background: -moz-linear-gradient(#a040a0,#803380);
+  background: -o-linear-gradient(#a040a0,#803380);
+  background: linear-gradient(#a040a0,#803380)!important;
+  border-color: #662966!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Ground {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#e0c068),to(#d4a82f));
+  background: -webkit-linear-gradient(#e0c068,#d4a82f);
+  background: -moz-linear-gradient(#e0c068,#d4a82f);
+  background: -o-linear-gradient(#e0c068,#d4a82f);
+  background: linear-gradient(#e0c068,#d4a82f)!important;
+  border-color: #AA8623!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Flying {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#a890f0),to(#9180c4));
+  background: -webkit-linear-gradient(#a890f0,#9180c4);
+  background: -moz-linear-gradient(#a890f0,#9180c4);
+  background: -o-linear-gradient(#a890f0,#9180c4);
+  background: linear-gradient(#a890f0,#9180c4)!important;
+  border-color: #7762B6!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Psychic {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#f85888),to(#f61c5d));
+  background: -webkit-linear-gradient(#f85888,#f61c5d);
+  background: -moz-linear-gradient(#f85888,#f61c5d);
+  background: -o-linear-gradient(#f85888,#f61c5d);
+  background: linear-gradient(#f85888,#f61c5d)!important;
+  border-color: #D60945!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Bug {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#a8b820),to(#8d9a1b));
+  background: -webkit-linear-gradient(#a8b820,#8d9a1b);
+  background: -moz-linear-gradient(#a8b820,#8d9a1b);
+  background: -o-linear-gradient(#a8b820,#8d9a1b);
+  background: linear-gradient(#a8b820,#8d9a1b)!important;
+  border-color: #616B13!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Rock {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#b8a038),to(#93802d));
+  background: -webkit-linear-gradient(#b8a038,#93802d);
+  background: -moz-linear-gradient(#b8a038,#93802d);
+  background: -o-linear-gradient(#b8a038,#93802d);
+  background: linear-gradient(#b8a038,#93802d)!important;
+  border-color: #746523!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Ghost {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#705898),to(#554374));
+  background: -webkit-linear-gradient(#705898,#554374);
+  background: -moz-linear-gradient(#705898,#554374);
+  background: -o-linear-gradient(#705898,#554374);
+  background: linear-gradient(#705898,#554374)!important;
+  border-color: #413359!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Dragon {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#7038f8),to(#4c08ef));
+  background: -webkit-linear-gradient(#7038f8,#4c08ef);
+  background: -moz-linear-gradient(#7038f8,#4c08ef);
+  background: -o-linear-gradient(#7038f8,#4c08ef);
+  background: linear-gradient(#7038f8,#4c08ef)!important;
+  border-color: #3D07C0!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Steel {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#b8b8d0),to(#9797ba));
+  background: -webkit-linear-gradient(#b8b8d0,#9797ba);
+  background: -moz-linear-gradient(#b8b8d0,#9797ba);
+  background: -o-linear-gradient(#b8b8d0,#9797ba);
+  background: linear-gradient(#b8b8d0,#9797ba)!important;
+  border-color: #7A7AA7!important;
+  text-shadow: 1px 1px 1px #333;
+}
+
+.Dark {
+  color: #FFF!important;
+  background: -webkit-gradient(linear,left top,left bottom,from(#705848),to(#513f34));
+  background: -webkit-linear-gradient(#705848,#513f34);
+  background: -moz-linear-gradient(#705848,#513f34);
+  background: -o-linear-gradient(#705848,#513f34);
+  background: linear-gradient(#705848,#513f34)!important;
+  border-color: #362A23!important;
+  text-shadow: 1px 1px 1px #333;
+}

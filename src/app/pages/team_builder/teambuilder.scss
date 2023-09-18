@@ -1,0 +1,13 @@
+.teambuilder {
+  height: 100%;
+  overflow: hidden;
+  width: 81%;
+  // padding-bottom: 6%;
+  scroll-behavior: auto;
+  overscroll-behavior: auto;
+
+}
+
+.teambuilder::-webkit-scrollbar {
+  display: none;
+}
