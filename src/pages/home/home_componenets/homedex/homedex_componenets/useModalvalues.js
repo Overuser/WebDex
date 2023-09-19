@@ -1,7 +1,7 @@
 import { useCallback, useReducer } from "react";
 
 export const useModalValues = () => {
-  const [{ pokemon, isOpen, bottom, background }, dispatch] = useReducer(
+  const [{ pokemon, isOpen, bottom, background, backdropFilter }, dispatch] = useReducer(
     (state, action) => {
       switch (action.type) {
         case "openModal":
@@ -12,9 +12,9 @@ export const useModalValues = () => {
             background: "rgba(0, 0, 0, 0.75)",
           };
         case "closeModal":
-          return { ...state, bottom: "-600px", background: "rgba(0, 0, 0, 0)" };
+          return { ...state, bottom: "-600px", background: "rgba(0, 0, 0, 0)", backdropFilter: "blur(0px)" };
         case "afterOpen":
-          return { ...state, bottom: "0px" };
+          return { ...state, bottom: "0px", backdropFilter: "blur(5px)" };
         case "afterClose":
           return { ...state, isOpen: false };
         default:
@@ -26,6 +26,7 @@ export const useModalValues = () => {
       pokemon: null,
       bottom: "-600px",
       background: "rgba(0, 0, 0, 0.75)",
+      backdropFilter: "blur(5px)"
     }
   );
 
@@ -40,11 +41,14 @@ export const useModalValues = () => {
     dispatch({
       type: "closeModal",
     });
-    setTimeout(() => {
-      dispatch({
-        type: "afterClose",
-      });
-    }, 900);
+    // setTimeout(() => {
+    //   dispatch({
+    //     type: "afterClose",
+    //   });
+    // }, 900);
+    dispatch({
+      type: "afterClose",
+    });
   }, []);
 
   const afterOpen = useCallback(() => {
@@ -61,5 +65,6 @@ export const useModalValues = () => {
     bottom,
     afterOpen,
     background,
+    backdropFilter
   };
 };

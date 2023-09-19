@@ -1,4 +1,3 @@
-const { forGen, forFormat } = require("@smogon/sets")
-
+import { forGen, forFormat } from "@smogon/sets";
 
 console.log( forFormat("gen6uu") );

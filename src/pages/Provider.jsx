@@ -4,7 +4,7 @@ import {
   useContext,
   useReducer
 } from "react";
-import { Pokedex as PokeApi } from 'pokeapi-js-wrapper';
+// import { Pokedex as PokeApi } from 'pokeapi-js-wrapper';
 
 
 const PokemonContext = createContext([]);
@@ -56,31 +56,31 @@ const usePokemonFetch = () => {
       });
   }, []);
 
-  const getPokemons = async() => {
-    const Pokedex = new PokeApi({
-      cacheImages: true
-    })
+  // const getPokemons = async() => {
+  //   const Pokedex = new PokeApi({
+  //     cacheImages: true
+  //   })
 
-    try {
-      (async () => {
-        const golduck = await Pokedex.getPokemonSpeciesList()
-        const results = golduck.results
-        const gar = await results.map((result) => {
-          return result.name
-        })
-        // console.log(gar)
-        try {
-          const pika = await Pokedex.getPokemonSpeciesByName(gar)
-          console.log(pika);
-        } catch (error) {
-          console.log('pikachu defeated');
-        }
-      })()
-    } catch (error) {
-      console.log('error happened');
-    }
-  }
-  getPokemons()
+  //   try {
+  //     (async () => {
+  //       const golduck = await Pokedex.getPokemonSpeciesList()
+  //       const results = golduck.results
+  //       const gar = await results.map((result) => {
+  //         return result.name
+  //       })
+  //       // console.log(gar)
+  //       try {
+  //         const pika = await Pokedex.getPokemonSpeciesByName(gar)
+  //         console.log(pika);
+  //       } catch (error) {
+  //         console.log('pikachu defeated');
+  //       }
+  //     })()
+  //   } catch (error) {
+  //     console.log('error happened');
+  //   }
+  // }
+  // getPokemons()
 
   return { pokemons, pending, teams };
 };

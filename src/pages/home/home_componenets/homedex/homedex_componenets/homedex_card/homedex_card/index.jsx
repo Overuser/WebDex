@@ -11,12 +11,12 @@ export default function Card ({ pokemon, openModal }) {
   }
 
   return (
-    <div key={pokemon.id} className='home__content__pokedex-card'>
+    <div onClick={ handleClick } className='home__content__pokedex-card'>
       <div className='home__content__pokedex-card__image'>
         <img src={ image } alt={ pokemon.name.english } height='100px' width='100px' />
       </div>
       <div className='home__content__pokedex-card__name'>
-        <span onClick={ handleClick } className="home__content__pokedex-card__name__name" >{pokemon.name.english.toUpperCase()}</span>
+        <span className="home__content__pokedex-card__name__name" >{pokemon.name.english.toUpperCase()}</span>
         <span className="home__content__pokedex-card__name__number" >{`#${String(pokemon.id).padStart(3, 0)}`}</span>
       </div>
       <div className='home__content__pokedex-card__types'>

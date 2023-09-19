@@ -8,6 +8,7 @@ const Pokeview = ({
   bottom,
   afterOpen,
   background,
+  backdropFilter
 }) => {
   return (
     <>
@@ -20,12 +21,13 @@ const Pokeview = ({
         onAfterOpen={afterOpen}
         className={"center"}
         overlayClassName={"overlay"}
-        closeTimeoutMS={ 0 }
+        closeTimeoutMS={ 250 }
         style={{
           overlay: {
             background: background,
             transition: "background 200ms ease-in-out",
-            zIndex: 3
+            zIndex: 3,
+            backdropFilter: backdropFilter
           },
           content: {
             bottom: bottom,

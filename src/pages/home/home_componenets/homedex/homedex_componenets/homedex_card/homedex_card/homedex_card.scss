@@ -23,6 +23,8 @@
     color: darken(white, 70%);
     text-decoration: none;
     margin-bottom: 0.3em;
+    cursor: default;
+
 
     .home__content__pokedex-card__name__number {
       margin-left: 0.5em;
@@ -36,5 +38,6 @@
     margin: 0 auto;
     text-align: center;
     width: 100%;
+    cursor: default;
   }
 }

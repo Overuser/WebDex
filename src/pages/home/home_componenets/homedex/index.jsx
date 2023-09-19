@@ -13,6 +13,7 @@ const Homedex = ({ pokemons, pending }) => {
     bottom,
     afterOpen,
     background,
+    backdropFilter
   } = useModalValues();
 
   return (
@@ -33,6 +34,7 @@ const Homedex = ({ pokemons, pending }) => {
         bottom={bottom}
         background={background}
         afterOpen={afterOpen}
+        backdropFilter={backdropFilter}
       />
     </div>
   );
