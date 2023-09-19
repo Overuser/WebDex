@@ -7,8 +7,9 @@ const root = ReactDOM.hydrateRoot(document.getElementById("root"),
     <App />
   </React.StrictMode>
 );
+
 // root.render(
 //   <React.StrictMode>
 //     <App />
 //   </React.StrictMode>
-// );
+// )
