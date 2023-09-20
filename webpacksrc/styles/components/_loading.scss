@@ -1,0 +1,55 @@
+.skeleton__block {
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.30);
+  border-radius: 15px;
+  box-shadow: 1px 1px 12px 0.1px rgba(0, 0, 0, 0.1);
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  height: 14.5em;
+  margin: .4em;
+  width: 12em;
+}
+
+
+.skeleton-image-container {
+  height: 45%;
+  width: 85%;
+  
+  span {
+    border-radius: 15px;
+  }
+}
+
+.skeleton-link-container {
+  height: 10%;
+  width: 85%;
+  margin: calc( $s-size / 2 );
+}
+
+.skeleton-type-container {
+  height: 18%;
+  width: 85%;
+
+  span {
+    border-radius: 15px;
+  }
+}
+
+.skeleton-image {
+  height: 100%;
+  width: 100%;
+}
+
+.skeleton-link {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.skeleton-type {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}

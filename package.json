@@ -1,35 +1,36 @@
 {
   "name": "ninja-app",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/entry-server.jsx --outDir dist/server",
+    "preview": "cross-env NODE_ENV=production node server"
+  },
   "dependencies": {
     "@smogon/sets": "^2.0.0",
     "cors": "^2.8.5",
-    "express": "^4.18.2",
     "json-server": "^0.17.3",
     "mongoose": "^7.2.0",
     "pg-promise": "^11.5.0",
     "pokeapi-js-wrapper": "^1.2.3",
+    "compression": "^1.7.4",
+    "express": "^4.18.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sirv": "^2.0.3",
     "react-loading-skeleton": "^3.3.1",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.14.2"
   },
-  "scripts": {
-    "json-teams": " npx json-server --watch src/Data/teams.json --port 5000",
-    "json-pokemons": "npx json-server --watch src/Data/pokedex.json --port 8000"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
+    "@vitejs/plugin-react": "^4.0.0",
+    "cross-env": "^7.0.3",
+    "vite": "^4.3.9"
   }
 }
