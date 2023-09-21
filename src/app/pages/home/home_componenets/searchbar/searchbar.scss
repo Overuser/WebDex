@@ -1,0 +1,42 @@
+@use '../../../../styles/base/settings';
+
+.home__searchbar__container {
+  margin: settings.$s-size auto;
+  height: 3.5rem;
+  background: rgba($color: settings.$dark-blue, $alpha: 0);
+  display: flex;
+    justify-content: right;
+  margin-right: 1%;
+  position: sticky;
+    top: 0;
+    z-index: 5;
+}
+
+#home__searchbar {
+  border-radius: 25px;
+  border: none;
+  height: settings.$l-size;
+  width: 15%;
+  outline: none;
+  padding: 7px;
+  background-color: darken($color: white, $amount: 20%);
+  transition: width 400ms ease-in-out;
+}
+
+#home__searchbar:focus {
+  width: 20%;
+  transition: width 400ms ease-in-out;
+}
+
+input[type="search" i]::-webkit-search-cancel-button {
+  margin-left: 2px;
+}
+
+input::-webkit-input-placeholder {
+  margin: 0 5px;
+  padding: 0 5px;
+}
+
+input::-webkit-textfield-decoration-container {
+  margin: 0 5px;
+}

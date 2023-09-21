@@ -1,0 +1,34 @@
+@use '../../styles//base//settings';
+
+.navbar {
+  background: settings.$off-black;
+  color: white;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+  height: 10%;
+  // margin-bottom: settings.$s-size;
+  max-width: 100vw;
+  padding: settings.$m-size 0;
+  // position: sticky;
+  top: 0;
+}
+
+.navbar__title {
+  font-size: settings.$l-size;
+  margin: 0;
+  margin-left: settings.$s-size;
+}
+
+.navbar__links {
+  color: settings.$off-white;
+  font-size: settings.$m-size;
+  font-weight: 500;
+  margin: settings.$s-size;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #f2f2f2;
+  margin: settings.$s-size;
+}
