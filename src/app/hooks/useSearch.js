@@ -139,3 +139,4 @@ const useSearch = (pokemons) => {
 };
 
 export default useSearch;
+

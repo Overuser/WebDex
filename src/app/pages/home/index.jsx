@@ -30,7 +30,7 @@ const Home = () => {
           option={option}
         />
       </div>
-      <Homedex pokemons={alteredPokemons} pending={pending} />
+      {/* <Homedex pokemons={alteredPokemons} pending={pending} /> */}
     </div>
   );
 };

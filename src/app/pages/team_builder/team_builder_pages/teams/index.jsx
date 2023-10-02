@@ -13,10 +13,10 @@ export const Teams = () => {
             <NavLink to='builder'>Create team</NavLink>
           </button>
           <div>
-            { teams.map(( team ) => {
+            {/* { teams.map(( team ) => {
                 console.log(team.team, 'teambuilder comp');
                 return <TeamsBlock key={ team.id } members={ team.team } />
-              })}
+              })} */}
           </div>
         </>
       }
