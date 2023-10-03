@@ -1,0 +1,39 @@
+.ReactModal__Overlay.ReactModal__Overlay--after-open.overlay {
+  position: fixed;
+  height: 90%;
+  width: 81%;
+  bottom: 0px;
+  transition:  backdrop-filter 100ms ease-in-out;
+}
+
+.ReactModal__Content.ReactModal__Content--after-open.center {
+  background: white;
+  position: absolute;
+  height: 65%;
+  width: 100%;
+  outline: none;
+  display: flex;
+      align-items: flex-end;
+
+  .middle {
+    background-color: white;
+    height: 110%; 
+    width: 50%;
+    border-radius: 4px;
+    text-align: center;
+  }
+  
+  .right { 
+    background-color: white;
+    height: 100%;
+    width: 25%;
+    border-radius: 4px;
+}
+  
+  .left {
+    background-color: white;
+    height: 100%;
+    border-radius: 4px;
+    width: 25%;
+  }
+}

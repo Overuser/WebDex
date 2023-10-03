@@ -1,0 +1,40 @@
+@use '../../../page_styles/base/settings';
+
+.home__content__pokedex-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+  height: 14.6em;
+  margin: 0.4em;
+  width: 12em;
+
+  .home__content__pokedex-card__image {
+    margin-bottom: calc( settings.$s-size + 1em );
+  }
+  
+  .home__content__pokedex-card__name {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    color: darken(white, 70%);
+    text-decoration: none;
+    margin-bottom: 0.3em;
+
+    .home__content__pokedex-card__name__number {
+      margin-left: 0.5em;
+      font-size: 0.7em;
+      font-weight: 300;
+      color: #111111;
+    }
+  }
+
+  .home__content__pokedex-card__types {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+}

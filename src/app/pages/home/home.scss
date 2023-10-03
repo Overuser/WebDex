@@ -1,0 +1,18 @@
+@use '../../styles/base/settings';
+
+.home {
+  height: 100%;
+  overflow: scroll;
+  width: 81%;
+  // padding-bottom: 6%;
+  scroll-behavior: auto;
+  overscroll-behavior: auto;
+  position: relative;
+
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+
+// 

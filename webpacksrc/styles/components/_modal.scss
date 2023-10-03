@@ -1,0 +1,50 @@
+
+.ReactModal__Content.ReactModal__Content--after-open.center {
+  bottom: 0;
+  outline: none;
+  display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  transition: bottom 500ms ease-out;
+  .center {
+    background-color: $off-white;
+    height: 105%;
+    width: 60%;
+    display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+    .img {
+      height: 35%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 200px;
+        width: 200px;
+        translate: 0px -40%;
+      }
+    }
+
+    div {
+      height: 75%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+  }
+  
+  .right { 
+    background-color: $off-white;
+    height: 100%;
+    width: 20%;
+  }
+
+  .left {
+    background-color: $off-white;
+    height: 100%;
+    width: 20%;
+  }
+}
