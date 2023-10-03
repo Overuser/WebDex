@@ -3,9 +3,9 @@ import { specieModel }  from '../models/pokemonSpecies.js'
 //Get All Pokemon Species
 export const getALlSpecies = async ( request, response ) => {
   try {
-    const species = await specieModel.find({})
+    const species = await specieModel.find({name: 'pikachu'})
     // console.log(species);
-    response.status(200).json(species)
+    response.status(200).send(species)  
   } catch (error) {
     response.status(400).json({mssg: error.message})
   }

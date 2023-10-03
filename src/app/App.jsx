@@ -31,12 +31,12 @@ const router = createBrowserRouter(
 const App = () => {
   
   return (
-    <PokemonProvider>
-      <QueryClientProvider client={queryClient} >
+    <QueryClientProvider client={queryClient} >
+      <PokemonProvider>
         <RouterProvider router={router} />
         <ReactQueryDevtools initialIsOpen={false} />
-      </QueryClientProvider>
-    </PokemonProvider>
+      </PokemonProvider>
+    </QueryClientProvider>
   );
 };
 

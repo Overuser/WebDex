@@ -15,5 +15,8 @@ router.get('/list', getALlPokemons)
 
 //Get a single pokemon
 router.get('/list/:id', getSinglePokemon)
+// router.get('/list/:id', (req, res) => {
+  
+// })
 
 
