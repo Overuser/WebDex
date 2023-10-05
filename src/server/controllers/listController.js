@@ -4,7 +4,6 @@ import { listModel } from "../models/pokemonList.js"
 export const getALlPokemons = async ( request, response ) => {
   try {
     const list = await listModel.find({})
-    // console.log(species);
     response.status(200).json(list)
   } catch (error) {
     response.status(400).json({mssg: error.message})
@@ -16,7 +15,6 @@ export const getSinglePokemon = async ( request, response ) => {
   const { id } = request.params
   try {
     const list = await listModel.find({id: id})
-    // console.log(species);
     response.status(200).json(list)
   } catch (error) {
     response.status(400).json({mssg: error.message})

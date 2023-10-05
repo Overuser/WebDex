@@ -3,9 +3,8 @@ import { specieModel }  from '../models/pokemonSpecies.js'
 //Get All Pokemon Species
 export const getALlSpecies = async ( request, response ) => {
   try {
-    const species = await specieModel.find({name: 'pikachu'})
-    // console.log(species);
-    response.status(200).send(species)  
+    const species = await specieModel.find({})
+    response.status(200).send(species)
   } catch (error) {
     response.status(400).json({mssg: error.message})
   }
@@ -16,7 +15,6 @@ export const getSingleSpecie = async ( request, response ) => {
   const { id } = request.params
   try {
     const species = await specieModel.find({id: id})
-    // console.log(species);
     response.status(200).json(species)
   } catch (error) {
     response.status(400).json({mssg: error.message})

@@ -5,6 +5,7 @@ import cors from 'cors'
 
 const app = express();
 
+//Middlewares
 app.use(cors({
   origin: ['http://localhost:5173'],
   credentials: true
@@ -15,7 +16,6 @@ app.use((req, res, next) => {
 })
 app.use(express.json());
 app.use('/api',router)
-// app.use()
 
 //connect to db
 mongoose.connect('mongodb://127.0.0.1:27017/Webdex')

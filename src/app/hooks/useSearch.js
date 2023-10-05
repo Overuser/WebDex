@@ -111,16 +111,16 @@ const useSearch = (pokemons) => {
     if (filterOption.length) {
       return pokemons
         .filter((pokemon) =>
-          pokemon.name.english
+          pokemon.name
             .toLowerCase()
             .includes(search.trim().toLowerCase())
         )
         .filter((pokemon) =>
-          pokemon.type.some((type) => filterOption.includes(type))
+          pokemon.types.some((type) => filterOption.includes(type.type.name))
         );
     } else {
       return pokemons.filter((pokemon) =>
-        pokemon.name.english.toLowerCase().includes(search.trim().toLowerCase())
+        pokemon.name.toLowerCase().includes(search.trim().toLowerCase())
       );
     }
   }, [pokemons, search, filterOption]);
