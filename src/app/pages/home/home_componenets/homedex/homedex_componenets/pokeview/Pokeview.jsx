@@ -36,7 +36,7 @@ const Pokeview = ({
       >
         <div className='left'></div>
         <div className='middle'>
-          <h2>{ pokemon.name.english }</h2>
+          <h2>{ pokemon.name }</h2>
         </div>
         <div className='right'></div>
       </ReactModal>

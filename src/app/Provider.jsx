@@ -1,68 +1,21 @@
 import {
   createContext,
-  useEffect,
-  useContext,
-  useReducer
+  useContext
 } from "react";
 import { useQuery } from "@tanstack/react-query"
 
 const PokemonContext = createContext([]);
 
 const usePokemonFetch = () => {
-//   const [{ pokemons, pending, teams }, dispatch] = useReducer(
-//     (state, action) => {
-//       switch (action.type) {
-//         // case "setPokemons":
-//         //   return { ...state, pokemons: action.payload, pending: false };
-//         case "setPending":
-//           return { ...state, pending: true };
-//         case "setTeams":
-//           return { ...state, teams: action.payload, pending: false };
-//         default:
-//           break;
-//       }
-//     },
-//     {
-//       pokemons: [],
-//       pending: true,
-//       teams: []
-//     }
-//   );
-
-  const { data:pokemons, isLoading, isSuccess,  isError, error } = useQuery({
+  const { data:pokemons, isSuccess,  isError, error, isFetching } = useQuery({
     queryKey: ['pokedex'],
-    queryFn: () => fetch("http://localhost:5000/api/species").then(response => response.json()),
+    queryFn: () => fetch("http://localhost:5000/api/list").then(response => response.json()).then( data => data ),
     networkMode: "always",
-    initialData: []
+    initialData: [],
+    cacheTime: Infinity
   })
 
-  // useEffect(() => {
-  //   fetch("http://localhost:8000/pokemon")
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       dispatch({
-  //         type: "setPokemons",
-  //         payload: data,
-  //       });
-  //     });
-  // }, [])
-
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/teams")
-  //     .then((response) => {
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       dispatch({
-  //         type: "setTeams",
-  //         payload: data,
-  //       });
-  //     });
-  // }, []);
-
-  return { pokemons, isLoading, isSuccess,  isError, error };
+  return { pokemons, isFetching, isSuccess,  isError, error };
 };
 
 export const PokemonProvider = ({ children }) => {
